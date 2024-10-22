@@ -1,0 +1,64 @@
+.loginBtn{
+    width: 100%;
+    background-color: #A357C4;
+    color: white;
+    padding: 20px 0px;
+    font: 800 25px var(--font-Medium) ;
+    border-radius: 8px;
+    letter-spacing: 2px;
+}
+
+
+
+.loginBtn {
+    font-family: var(--font-Medium);
+    font-weight: 700;
+    font-size: 28px;
+    padding: 14px 70px;
+    position: relative;
+    transition: color 0.3s ease;
+    overflow: hidden; /* Ensure overflow is hidden to not show the pseudo-element outside the button */
+    z-index: 1;
+  }
+  
+  
+  .loginBtn:before {
+    transition: 0.8s all ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%; /* Start from the bottom of the button */
+    height: 100%; /* Full height */
+    opacity: 0; /* Start hidden */
+    content: '';
+    background-color: black;
+    z-index: -1; /* Place behind the text */
+    /* border-color: #A357C4; */
+  }
+  
+  .loginBtn:hover,.loginBtn:focus {
+    color: white; /* Change text color on hover */  
+  }
+  
+  .loginBtn:hover:before, .loginBtn:focus:before {
+    transition: 0.5s all ease;
+    top: 0; /* Move the background color to the top */
+    opacity: 1; /* Fade in */
+    border-color: black;
+  }
+  
+  
+
+  @media (max-width: 1366px) {
+    .loginBtn{
+        padding: 14px 0px;
+        font-size: 22px;
+    }
+  }
+
+  @media (max-width:640px) {
+    .loginBtn{
+        padding: 14px 0px;
+        font-size: 17px;
+    }
+  }

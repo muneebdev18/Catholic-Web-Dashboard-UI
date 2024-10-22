@@ -1,0 +1,199 @@
+.navWrapper {
+  background-image: url("../../assets/images/home-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 280px;
+  position: relative;
+}
+
+.navWrapperSecondary {
+  height: 100px;
+  background-image: url("../../assets/images/home-bg.png");
+  background-repeat: no-repeat;
+  background-position: unset;
+  background-size: cover;
+  position: relative;
+  border-bottom: none !important;
+}
+
+p {
+  font-size: 22px;
+}
+
+.navLinkWrapper {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 0;
+  z-index: 9999;
+  height: 100px;
+  width: 100%;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /* opacity: 0.5; */
+  font-size: 20px;
+}
+
+.navLinkWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  /* Use the same image as the navWrapper */
+  filter: blur(8px);
+  /* Adjust the blur effect here */
+  z-index: -1;
+  /* Send the blur behind the links */
+}
+
+.signInLink {
+  font-family: var(--font-Medium);
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.joinBtn {
+  padding: 10px 39px;
+  background-color: var(--primaryColor);
+  color: var(--darkColor);
+  border: 2px solid var(--darkColor);
+  border-radius: 8px;
+  font-weight: 700;
+  font-family: var(--font-Medium);
+  font-size: 24px;
+  position: relative;
+  transition: color 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+  letter-spacing: 0.5px;
+}
+
+.joinBtn:before {
+  transition: 0.8s all ease;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 100%;
+  opacity: 0;
+  content: "";
+  background-color: #a357c4;
+  z-index: -1;
+}
+
+.joinBtn:hover,
+.joinBtn:focus {
+  color: white;
+  /* Change text color on hover */
+  border-color: #a357c4;
+}
+
+.joinBtn:hover:before,
+.joinBtn:focus:before {
+  transition: 0.5s all ease;
+  top: 0;
+  /* Move the background color to the top */
+  opacity: 1;
+  /* Fade in */
+  border-color: #a357c4;
+}
+
+@media (max-width: 1920px) {
+  .navWrapper {
+    height: 650px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .navWrapperSecondary {
+    height: 100px;
+    background-image: url("../../assets/images/home-bg.png");
+    background-repeat: no-repeat;
+    background-position: unset;
+    background-size: cover;
+    position: relative;
+    border-bottom: none !important;
+  }
+  .navWrapperSecondary > .navLinkWrapper{
+    border-bottom: none;
+
+  }
+  .navLinkWrapper {
+    font-size: 20px;
+  }
+
+  .logoImg {
+    width: 610px;
+    height: 290px;
+  }
+
+  .navWrapper {
+    height: 540px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .navLinkWrapper {
+    font-size: 18px;
+  }
+
+  .navWrapper {
+    height: 490px;
+  }
+
+  .logoImg {
+    width: 510px;
+    height: 245px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .navLinkWrapper {
+    font-size: 17px;
+    gap: 60px;
+  }
+
+  .logoImg {
+    width: 440px;
+    height: 215px;
+  }
+
+  .navWrapper {
+    height: 460px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .logoImg {
+    width: 320px;
+    height: 150px;
+  }
+
+  .signInLink {
+    font-size: 18px;
+  }
+
+  .joinBtn {
+    padding: 5px 21px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 440px) {
+  .logoImg {
+    width: 240px;
+    height: 105px;
+  }
+
+  .signInLink {
+    font-size: 14px;
+  }
+
+  .navWrapper {
+    height: 350px;
+  }
+}

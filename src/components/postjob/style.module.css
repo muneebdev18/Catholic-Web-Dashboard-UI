@@ -1,0 +1,46 @@
+.postJobBtn{
+    background-color: #1b6313;
+
+    color: var(--primaryColor);
+    padding:7px 56px;
+    border: 1px solid var(--primaryColor);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: color 0.3s ease;
+    overflow: hidden; /* Ensure overflow is hidden to not show the pseudo-element outside the button */
+    z-index: 1;
+  }
+  .postImg1{
+    right: 40px !important
+  }
+  @media (max-width:990px){
+    .postImg7{
+      top:80px !important 
+    }
+    .postImg6{
+      bottom: 30px !important;
+    }
+    .postImg4{
+      top: 370px !important;
+    }.postImg5{
+      left: 40px !important;
+    }
+    .postImg1{
+      right: 100px !important
+    }
+    .postImg2{
+      bottom: 20px !important;
+    }
+    .postImg3{
+      top: 250px !important;
+    }
+  }
+
+  @media (max-width:640px){
+    #rightSide{
+      display: none;
+    }
+  }

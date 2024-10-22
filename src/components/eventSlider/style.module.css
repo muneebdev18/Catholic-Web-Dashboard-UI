@@ -1,0 +1,159 @@
+.eventSliderContainer {
+  padding: 40px 75px;
+}
+.eventSliderWrapper > h2 {
+  font-family: "Degular Medium";
+  font-size: 55px;
+  font-weight: 700;
+
+}
+.eventSubTitle {
+  margin-top: 0px;
+}
+.eventSliderWrapper > button {
+  padding: 7px 70px;
+  font-family: "Degular Medium";
+  font-size: 28px;
+  font-weight: 800;
+  position: relative;
+  transition: color 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+
+}
+
+.eventSliderWrapper > button:before {
+  transition: 0.8s all ease;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%; /* Start from the bottom of the button */
+  height: 100%; /* Full height */
+  opacity: 0; /* Start hidden */
+  content: "";
+  background-color: #ecb202;
+  z-index: -1; /* Place behind the text */
+  /* border-color: #A357C4; */
+}
+
+.eventSliderWrapper > button:hover,
+.eventSliderWrapper > button:focus {
+  color: white; /* Change text color on hover */
+  border-color: #ecb202;
+}
+
+.eventSliderWrapper > button:hover:before,
+.eventSliderWrapper > button:focus:before {
+  transition: 0.5s all ease;
+  top: 0; /* Move the background color to the top */
+  opacity: 1; /* Fade in */
+  border-color: #ecb202;
+}
+.arrowNextBtnBg {
+  /* border: 2px solid; */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -12px;
+}
+.arrowPrevBtnBg {
+  /* border: 2px solid; */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -12px;
+}
+.arrowIcon {
+  width: 50px;
+  height: 30px;
+  /* object-fit: contain; */
+}
+.eventsTitle {
+  font-family: var(--font-Medium);
+  font-weight: 800;
+  font-size: 26px;
+  margin-top: 9px;
+}
+
+@media (max-width: 1600px) {
+  .eventsTitle {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1440px) {
+  .eventsTitle {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1280px) {
+  .eventSliderWrapper > h2 {
+    font-size: 35px;
+  }
+  .eventSubTitle {
+    font-size: 17px;
+  }
+
+}
+@media (max-width: 1024px) {
+  .eventSliderWrapper > h2 {
+    font-size: 31px;
+  }
+  .eventSubTitle {
+    font-size: 16px;
+  }
+  .eventSliderWrapper > button {
+    padding: 8px 50px;
+    font-size: 16px;
+  }
+  /* .eventSliderContainer {
+    padding: 0 15px;
+  } */
+}
+
+@media (max-width:990px){
+  .eventSliderContainer{
+    padding: 0px 26px;
+  }
+}
+
+@media (max-width:640px) {
+    .eventSliderContainer {
+    padding: 40px 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  .eventSliderWrapper > h2 {
+    font-size: 25px;
+  }
+  .eventSubTitle {
+    font-size: 14px;
+  }
+  .eventSliderWrapper > button {
+    padding: 8px 40px;
+    font-size: 14px;
+  }
+  .eventsTitle {
+    font-size: 17px;
+}
+}
+
+@media (max-width: 360px) {
+  .eventSliderWrapper > h2 {
+    font-size: 21px;
+  }
+  .eventSubTitle {
+    font-size: 13px;
+  }
+  .eventSliderWrapper > button {
+    padding: 8px 30px;
+    font-size: 14px;
+  }
+  .eventsTitle {
+    font-size: 16px;
+}
+}

@@ -1,0 +1,8 @@
+.activeLink{
+    background-color: var(--purpleColor);
+    padding: 12px 5px;
+    border-radius: 12px;
+    color: white !important;
+    font-weight: 900;
+    font-family: var(--font-Medium);
+}

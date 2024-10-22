@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Degular';
+  src: url('./assets/fonts/Degular/fonnts.com-DegularDemo-Light.otf');
+};
+@font-face {
+  font-family: 'Degular Medium';
+  src: url('./assets/fonts/Degular/fonnts.com-DegularDemo-Medium.otf');
+};
+
+:root {
+--backgroundColor : #E0D4C5;
+--purpleColor : #A357C4;
+--primaryColor : #ffffff;
+--darkColor:#000000;
+--darkGreenColor:#1B6313;
+--yellowColor:#ECB202;
+--font-Regular : 'Degular';
+--font-Medium : 'Degular Medium';
+--Secondary-Font : "Style Script", cursive;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, ul, li, a, textarea {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Degular';
+  background-color: var(--backgroundColor);
+	/* overflow-x: hidden; */
+	/*font-family: 'Lora', serif;*/
+}

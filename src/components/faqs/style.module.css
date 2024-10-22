@@ -1,0 +1,148 @@
+.faqContainer{
+    padding: 75px 75px;
+}
+.faqContainer > h2{
+font-family: var(--font-Medium);
+font-weight: 800;
+font-size: 55px;
+text-align: center;
+/* line-height: 30px; */
+}
+#faqBtn{
+    padding: 32px 21px;
+    font-size: 26px;
+    font-weight: 900;
+    font-family: var(--font-Medium);
+    height: 80px;
+}
+.faqContainer > p{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    /* margin-top: 10px; */
+    }
+
+@media (max-width:1600px){
+    /* .faqContainer{
+        padding: 0px 70px;
+    } */
+}
+@media (max-width:1440px){
+    /* .faqContainer{
+        padding: 60px 60px;
+    } */
+    #faqBtn{
+        padding: 10px 8px;
+        font-size: 18px;
+        height: 60px;
+    }
+}
+@media (max-width:1280px){
+
+    #faqBtn{
+        padding: 17px 20px;
+        font-size: 17px;
+        font-weight: 900;
+        font-family: var(--font-Medium);
+        height: 60px;
+    }
+    .faqAnswer > p{
+        font-size: 15px;
+    }
+}
+@media (max-width:1024px){
+    #faqBtn{
+        padding: 14px 19px;
+        font-size: 14px;
+        height: 60px;
+    }
+
+    
+}
+
+@media (max-width:991px){
+.faqContainer{
+    
+        padding: 75px 26px;
+     
+}
+}
+@media (max-width:840px){
+    .faqContainer > h2 {
+        font-size: 29px;
+    }
+    .faqContainer > p{
+        font-size: 17px;
+
+    margin-bottom: 20px;
+
+    }
+    #faqBtn{
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+    
+    .addsubIcon{
+        width: 17px;
+        height: 17px;
+        font-weight: 900;
+    }  
+    /* .faqContainer{
+        padding: 75px 26px;
+    }  */
+}
+
+@media (max-width:800px){
+    #faqBtn{
+        padding: 14px 11px;
+        font-size: 13px;
+    }
+
+}
+@media (max-width:640px){
+.faqContainer{
+    padding: 0px 15px;
+}
+}
+@media (max-width:525px){
+    #faqBtn{
+        padding: 14px 11px;
+        font-size: 16px;
+    }
+    .faqContainer > p{
+        font-size: 15px;
+    }
+    .faqContainer{
+        padding: 50px 15px;
+    }
+}
+
+@media (max-width:430px){
+    #faqBtn{
+        padding: 14px 11px;
+        font-size: 14px;
+    }
+    .faqContainer > p{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:390px){
+    #faqBtn{
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+    .faqContainer > p{
+        font-size: 13px;
+    }
+}
+
+@media (max-width:360px){
+    #faqBtn{
+        padding: 11px 10px;
+        font-size: 12px;
+    }
+    .faqContainer > p{
+        font-size: 13px;
+    }
+}
