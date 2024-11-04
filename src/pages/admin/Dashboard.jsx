@@ -15,7 +15,7 @@ const Dashboard = () => {
     const isSettingsMatch = useMatch('/dashboard/settings');
 
     // Sidebar should be visible only for these exact matches
-  const isSidebarVisible = isDashboardMatch || isUsersMatch || isAdminMatch || isNotificationMatch || isSettingsMatch
+    const isSidebarVisible = isDashboardMatch || isUsersMatch || isAdminMatch || isNotificationMatch || isSettingsMatch
     return (
         <div className='flex h-screen bg-[#E0D4C5] text-[#000000]'>
             <div className='fixed inset-0 -z-10'>
@@ -25,7 +25,7 @@ const Dashboard = () => {
             </div>
 
             {/* Sidebar */}
-           {isSidebarVisible &&  <DashboardSidebar />}
+            {isSidebarVisible && <DashboardSidebar />}
 
             <div className='flex-1 overflow-y-auto'>
                 <Routes>
@@ -34,7 +34,7 @@ const Dashboard = () => {
                     <Route path="/adminmanagement" element={<AdminManagement />} />
                     <Route path="/notifications" element={<Notifications />} />
                     <Route path="/settings" element={<Settings />} />
-                    <Route path='*' element={<NotFound/>}/>
+                    <Route path='*' element={<NotFound />} />
                 </Routes>
             </div>
         </div>

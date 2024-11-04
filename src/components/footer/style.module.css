@@ -1,22 +1,25 @@
-.secondSection > h1 {
+.secondSection>h1 {
   font-size: 40px;
   font-family: var(--font-Medium);
   font-weight: 900;
   margin-bottom: 20px;
 }
-.thirdSection > h1 {
+
+.thirdSection>h1 {
   font-size: 40px;
   font-family: var(--font-Medium);
   font-weight: 900;
   margin-bottom: 20px;
 }
-.fourthSection > h1 {
+
+.fourthSection>h1 {
   font-size: 40px;
   font-family: var(--font-Medium);
   font-weight: 900;
   margin-bottom: 20px;
 }
-.fifthSection > h1 {
+
+.fifthSection>h1 {
   font-size: 40px;
   font-family: var(--font-Medium);
   font-weight: 900;
@@ -26,19 +29,20 @@
 .secondSection,
 .firstSection,
 .thirdSection,
-.fourthSection > p {
+.fourthSection>p {
   font-size: 22px;
-  cursor: pointer;
+  /* cursor: pointer; */
   font-family: var(--font-Medium);
 }
-.fifthSection > p {
+
+.fifthSection>p {
   font-size: 19px;
   margin-bottom: 18px;
   font-family: var(--font-Medium);
 
 }
 
-.fifthSection > form > input {
+.fifthSection>form>input {
   background-color: #ede2d4;
   width: 100%;
   padding: 14px 12px;
@@ -46,7 +50,8 @@
   font-size: 19px;
   color: #000000;
 }
-.fifthSection > form > button {
+
+.fifthSection>form>button {
   background-color: var(--primaryColor);
   /* width: 70%; */
   padding: 5px 42px;
@@ -56,48 +61,59 @@
   font-family: var(--font-Medium);
   font-weight: 800;
   margin-top: 18px;
-  font-size:22px ;
+  font-size: 22px;
   position: relative;
   transition: color 0.3s ease;
-  overflow: hidden; /* Ensure overflow is hidden to not show the pseudo-element outside the button */
+  overflow: hidden;
+  /* Ensure overflow is hidden to not show the pseudo-element outside the button */
   z-index: 1;
 }
 
 
-.fifthSection > form > button:before {
+.fifthSection>form>button:before {
   transition: 0.8s all ease;
   position: absolute;
   left: 0;
   right: 0;
-  top: 100%; /* Start from the bottom of the button */
-  height: 100%; /* Full height */
-  opacity: 0; /* Start hidden */
+  top: 100%;
+  /* Start from the bottom of the button */
+  height: 100%;
+  /* Full height */
+  opacity: 0;
+  /* Start hidden */
   content: '';
   background-color: #ECB202;
-  z-index: -1; /* Place behind the text */
+  z-index: -1;
+  /* Place behind the text */
   /* border-color: #A357C4; */
 }
 
-.fifthSection > form > button:hover, .fifthSection > form > button:focus {
-  color: white; /* Change text color on hover */
+.fifthSection>form>button:hover,
+.fifthSection>form>button:focus {
+  color: white;
+  /* Change text color on hover */
   border-color: #ECB202;
 
 
 }
 
-.fifthSection > form > button:hover:before, .fifthSection > form > button:focus:before {
+.fifthSection>form>button:hover:before,
+.fifthSection>form>button:focus:before {
   transition: 0.5s all ease;
-  top: 0; /* Move the background color to the top */
-  opacity: 1; /* Fade in */
+  top: 0;
+  /* Move the background color to the top */
+  opacity: 1;
+  /* Fade in */
   border-color: #ECB202;
 }
 
 
 
-.fifthSection > form > input::placeholder {
+.fifthSection>form>input::placeholder {
   color: #151515 !important;
   font-weight: 900;
 }
+
 .footerBottom {
   display: flex;
   justify-content: center;
@@ -105,91 +121,114 @@
   margin: 20px;
   font-weight: 800;
 }
-.footerBottom > p > span {
+
+.footerBottom>p>span {
   margin-right: 15px;
   margin-left: 15px;
 }
-.fifthSection > form > button{
 
-}
+/* .fifthSection > form > button{
+
+} */
 @media (max-width: 1440px) {
-  .firstSection > p {
+  .firstSection>p {
     font-size: 16px;
   }
-  .fourthSection > p {
+
+  .fourthSection>p {
     font-size: 16px;
   }
-  .secondSection > p {
+
+  .secondSection>p {
     font-size: 16px;
   }
-  .thirdSection > p {
+
+  .thirdSection>p {
     font-size: 16px;
   }
-  .fifthSection > form > button {
+
+  .fifthSection>form>button {
     padding: 6px 32px;
   }
 }
 
 @media (max-width: 1280px) {
+
   .secondSection,
   .firstSection,
   .thirdSection,
-  .fourthSection > p {
+  .fourthSection>p {
     font-size: 15px;
   }
-  .secondSection > h1 {
+
+  .secondSection>h1 {
     font-size: 26px;
   }
-  .thirdSection > h1 {
+
+  .thirdSection>h1 {
     font-size: 26px;
   }
-  .fourthSection > h1 {
+
+  .fourthSection>h1 {
     font-size: 26px;
   }
-  .fifthSection > h1 {
+
+  .fifthSection>h1 {
     font-size: 26px;
   }
-  .fifthSection > form > input {
+
+  .fifthSection>form>input {
     font-size: 14px;
   }
-  .footerBottom > p {
+
+  .footerBottom>p {
     font-size: 20px;
   }
 }
 
 @media (max-width: 1024px) {
-  .firstSection > p {
+  .firstSection>p {
     font-size: 13px;
   }
-  .fourthSection > p {
+
+  .fourthSection>p {
     font-size: 13px;
   }
-  .secondSection > p {
+
+  .secondSection>p {
     font-size: 13px;
   }
-  .thirdSection > p {
+
+  .thirdSection>p {
     font-size: 13px;
   }
-  .secondSection > h1 {
+
+  .secondSection>h1 {
     font-size: 23px;
   }
-  .thirdSection > h1 {
+
+  .thirdSection>h1 {
     font-size: 23px;
   }
-  .fourthSection > h1 {
+
+  .fourthSection>h1 {
     font-size: 23px;
   }
-  .fifthSection > h1 {
+
+  .fifthSection>h1 {
     font-size: 23px;
   }
-  .fifthSection > form > input {
+
+  .fifthSection>form>input {
     font-size: 12px;
   }
-  .fifthSection > form > button {
+
+  .fifthSection>form>button {
     padding: 6px 20px;
     font-size: 13px;
   }
-  .footerBottom > p {
+
+  .footerBottom>p {
     font-size: 18px;
   }
 }
@@ -200,62 +239,72 @@
     padding-left: 25px;
     padding-right: 25px;
   }
-  .firstSection > img {
+
+  .firstSection>img {
     margin: 0 auto;
   }
 }
-@media (max-width:640px){
-  .fifthSection > form > input{
+
+@media (max-width:640px) {
+  .fifthSection>form>input {
     width: 50%;
     margin-right: 20px;
   }
 }
+
 @media (max-width: 540px) {
-  .footerBottom > p {
+  .footerBottom>p {
     font-size: 15px;
-    
+
   }
-  .footerBottom > p > span {
+
+  .footerBottom>p>span {
     margin-right: 6px;
     margin-left: 6px;
   }
 }
+
 @media (max-width: 480px) {
-  .footerBottom > p {
+  .footerBottom>p {
     font-size: 14px;
   }
 }
 
 @media (max-width: 430px) {
-  .fifthSection > form > input {
+  .fifthSection>form>input {
     width: 50%;
     margin-right: 10px;
   }
-  .fifthSection > form > button {
+
+  .fifthSection>form>button {
     padding: 6px 10px;
     font-size: 13px;
   }
-  .footerBottom > p{
+
+  .footerBottom>p {
     font-size: 13px;
 
   }
-  .footerBottom > p > span{
+
+  .footerBottom>p>span {
     margin-right: 8px;
     margin-left: 8px;
   }
 }
 
 @media (max-width: 375px) {
-  .fifthSection > form > input {
+  .fifthSection>form>input {
     width: 70%;
     margin-right: 0px;
   }
-  .footerBottom > p{
+
+  .footerBottom>p {
     font-size: 11px;
 
   }
-  .footerBottom > p > span{
-    margin-right:1px;
+
+  .footerBottom>p>span {
+    margin-right: 1px;
     margin-left: 1px;
   }
 

@@ -1,0 +1,75 @@
+.communityBtn {
+    padding: 9px 75px;
+    background-color: var(--primaryColor);
+    font-size: 26px;
+
+
+    border: 1px solid var(--darkColor);
+    border-radius: 10px;
+    position: relative;
+    transition: color 0.3s ease;
+    overflow: hidden;
+    /* Ensure overflow is hidden to not show the pseudo-element outside the button */
+    z-index: 1;
+}
+
+
+.communityBtn:before {
+    transition: 0.8s all ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    /* Start from the bottom of the button */
+    height: 100%;
+    /* Full height */
+    opacity: 0;
+    /* Start hidden */
+    content: '';
+    background-color: #ECB202;
+    z-index: -1;
+    /* Place behind the text */
+    /* border-color: #A357C4; */
+}
+
+.communityBtn:hover,
+.communityBtn:focus {
+    color: white;
+    /* Change text color on hover */
+    border-color: #ECB202;
+
+
+}
+
+.communityBtn:hover:before,
+.communityBtn:focus:before {
+    transition: 0.5s all ease;
+    top: 0;
+    /* Move the background color to the top */
+    opacity: 1;
+    /* Fade in */
+    border-color: #ECB202;
+}
+
+
+@media (max-width:1024px) {
+    .communityBtn {
+        padding: 8px 38px;
+        font-size: 21px;
+    }
+}
+
+@media (max-width:640px) {
+    .communityBtn {
+        padding: 8px 33px;
+        font-size: 18px;
+
+    }
+}
+
+@media (max-width:440px) {
+    .communityBtn {
+        padding: 7px 28px;
+        font-size: 16px;
+    }
+}

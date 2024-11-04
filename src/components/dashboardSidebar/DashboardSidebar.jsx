@@ -73,7 +73,7 @@ const DashboardSidebar = () => {
                 {isSidebarOpen ? (
                     <button
                         onClick={() => setActiveModal(true)}
-                        className="bg-[#A357C4] text-white text-[18px] font-extrabold font-fontMedium tracking-wider py-4 px-3 rounded-xl flex justify-center items-center"
+                        className="bg-[#A357C4] text-white text-[18px] font-extrabold font-fontMedium tracking-wider py-4 px-3 rounded-xl flex justify-center items-center btn-hover-action"
                     >
                         <span className="mr-2">
                             <TbLogout size={23} />
@@ -83,7 +83,7 @@ const DashboardSidebar = () => {
                 ) : (
                     <div
                         onClick={() => setActiveModal(true)}
-                        className="bg-[#A357C4] cursor-pointer text-black text-[18px] font-medium py-3 px-3 flex justify-normal items-center rounded-xl"
+                        className="bg-[#A357C4] cursor-pointer text-black text-[18px] font-medium py-3 px-3 flex justify-normal items-center rounded-xl btn-hover-action"
                     >
                         <span>
                             <TbLogout size={24} color='#fff'/>

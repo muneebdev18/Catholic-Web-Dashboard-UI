@@ -15,13 +15,15 @@ import styles from './style.module.css';
 const Card = ({ name, role, image, location, socialLinks, featured }) => {
     return (
         <div className="flex flex-col sm:p-4 xxxsm:py-[20px]  rounded-lg">
-            <img
-                src={image}
-                alt={name}
-                className="w-full h-64 rounded-lg transition object-cover"
-            />
-            <div className='flex flex-row justify-between pt-2'>
-                <h2 className="xl:text-[32px]  lg:text-[28px] md:text-[20px] sm:text-[26px] xsm:text-[20px] font-fontMedium font-semibold">{name}</h2>
+            <div className='h-64 overflow-hidden rounded-xl hover:rounded-xl'>
+                <img
+                    src={image}
+                    alt={name}
+                    className="w-full h-64 rounded-lg transition object-cover duration-300 hover:scale-110"
+                />
+            </div>
+            <div className='flex flex-row justify-between items-start pt-2'>
+                <h2 className="2xl:text-[32px] lg:text-[23px] md:text-[20px] sm:text-[26px] xsm:text-[20px] font-fontMedium font-semibold">{name}</h2>
                 {featured && (
                     <h3 className="mt-2 font-fontMedium bg-[#A357C4] text-white 2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[12px] sm:text-[11px] xsm:text-[9px] px-4 py-1 rounded">
                         Featured
@@ -150,7 +152,7 @@ const SkilledGrid = () => {
                 <p className="md:text-[20px] sm:text-[16px] sm:mt-2 xxxsm:text-[14px] xxxsm:mt-4">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt.</p>
             </div>
 
-            <div  data-aos="fade-up" data-aos-duration="1500"  className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xsm:grid-cols-1 md:gap-6 sm:gap-4">
+            <div data-aos="fade-up" data-aos-duration="1500" className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xsm:grid-cols-1 2xl:gap-6 xl:gap-4 lg:gap-3 md:gap-3 sm:gap-4">
                 {profiles.map((profile, index) => (
                     <Card key={index} {...profile} />
                 ))}

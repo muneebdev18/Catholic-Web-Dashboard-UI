@@ -1,0 +1,72 @@
+.customButton {
+    padding: 9px 75px;
+    background-color: #1B6313;
+    font-size: 26px;
+    width: 100%;
+    font-family: var(--font-Medium);
+    font-weight: 600;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    transition: color 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.customButton:before {
+    transition: 0.8s all ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 100%;
+    opacity: 0;
+    content: '';
+    background-color: black;
+    z-index: -1;
+}
+
+.customButton:hover,
+.customButton:focus {
+    color: white;
+}
+
+.customButton:hover:before,
+.customButton:focus:before {
+    transition: 0.5s all ease;
+    top: 0;
+    opacity: 1;
+    border-color: #ECB202;
+}
+
+@media (min-width: 375px) {
+
+    /* xxxsm */
+    .customButton {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 640px) {
+
+    /* xxsm */
+    .customButton {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* md */
+    .customButton {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1536px) {
+
+    /* 2xl */
+    .customButton {
+        font-size: 28px;
+    }
+}

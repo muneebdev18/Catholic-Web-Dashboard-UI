@@ -1,0 +1,153 @@
+.animateBtn {
+    background-color: white;
+    font-family: var(--font-Medium);
+    font-size: 27px;
+    font-weight: 700;
+    padding: 12px 86px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: color 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.animateBtn:before {
+    transition: 0.8s all ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 100%;
+    opacity: 0;
+    content: "";
+    background-color: #ecb202;
+    z-index: -1;
+}
+
+.animateBtn:hover,
+.animateBtn:focus {
+    color: white;
+    border-color: #ecb202;
+}
+
+.animateBtn:hover:before,
+.animateBtn:focus:before {
+    transition: 0.5s all ease;
+    top: 0;
+    opacity: 1;
+}
+
+.blackBtn {
+    background-color: white;
+    font-family: var(--font-Medium);
+    font-size: 27px;
+    font-weight: 700;
+    padding: 8px 56px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: color 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.blackBtn:before {
+    transition: 0.8s all ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 100%;
+    opacity: 0;
+    content: "";
+    background-color: black;
+    z-index: -1;
+}
+
+.blackBtn:hover,
+.blackBtn:focus {
+    color: white;
+}
+
+.blackBtn:hover:before,
+.blackBtn:focus:before {
+    transition: 0.5s all ease;
+    top: 0;
+    opacity: 1;
+    /* border-color: #ecb202; */
+}
+
+@media (max-width: 1366px) {
+    .animateBtn {
+        font-size: 22px;
+    }
+
+    .blackBtn {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .animateBtn {
+        font-size: 20px;
+        padding: 12px 56px;
+    }
+
+    .blackBtn {
+        font-size: 20px;
+        padding: 12px 56px;
+    }
+}
+
+@media (max-width: 840px) {
+    .animateBtn {
+        font-size: 18px;
+    }
+
+    .blackBtn {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .animateBtn {
+        font-size: 17px;
+        padding: 10px 36px;
+    }
+
+    .blackBtn {
+        font-size: 17px;
+        padding: 10px 36px;
+    }
+}
+
+@media (max-width: 525px) {
+    .animateBtn {
+        font-size: 16px;
+        padding: 15px 35px;
+    }
+
+    .blackBtn {
+        font-size: 16px;
+        padding: 15px 35px;
+    }
+}
+
+@media (max-width: 490px) {
+    .animateBtn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    .blackBtn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}

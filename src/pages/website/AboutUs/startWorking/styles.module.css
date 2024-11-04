@@ -1,0 +1,74 @@
+
+.getStartBtn {
+    background-color: var(--primaryColor);
+    /* width: 70%; */
+    padding: 10px 52px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    color: #000000;
+    font-family: var(--font-Medium);
+    font-weight: 900;
+    /* margin-top: 18px; */
+    font-size:28px ;
+    position: relative;
+    transition: color 0.3s ease;
+    overflow: hidden; /* Ensure overflow is hidden to not show the pseudo-element outside the button */
+    z-index: 1;
+  }
+  
+  
+  .getStartBtn:before {
+    transition: 0.8s all ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%; /* Start from the bottom of the button */
+    height: 100%; /* Full height */
+    opacity: 0; /* Start hidden */
+    content: '';
+    background-color: black;
+    z-index: -1; /* Place behind the text */
+    /* border-color: #A357C4; */
+  }
+  
+  .getStartBtn:hover, .getStartBtn:focus {
+    color: white; /* Change text color on hover */
+    border-color: black;
+  
+  
+  }
+  
+  .getStartBtn:hover:before, .getStartBtn:focus:before {
+    transition: 0.5s all ease;
+    top: 0; /* Move the background color to the top */
+    opacity: 1; /* Fade in */
+    border-color: black;
+  }
+  
+  
+
+  @media (max-width:1280px) {
+    .getStartBtn{
+    padding: 8px 42px;
+      font-size: 25px;
+    }
+  }
+  @media (max-width:768px) {
+    .getStartBtn{
+    padding: 8px 32px;
+      font-size: 22px;
+    }
+  }
+  @media (max-width:640px) {
+    .getStartBtn{
+      margin-bottom: 40px;
+    }
+  }
+  @media (max-width:540px) {
+    .getStartBtn{
+    padding: 8px 22px;
+      font-size: 20px;
+    }
+  }
+
+

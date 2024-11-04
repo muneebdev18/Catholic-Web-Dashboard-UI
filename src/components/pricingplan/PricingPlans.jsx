@@ -1,5 +1,5 @@
 import popular from '../../assets/images/icons/popular.png';
-// import './style.css';
+import style from './style.module.css';
 
 const PricingPlans = () => {
     const plans = [
@@ -102,7 +102,8 @@ const PricingPlans = () => {
 
                         <div className='bg-[#f3f6f3] px-2 py-2 rounded-3xl sm:rounded-[20px] xxxsm:rounded-[15px]'>
                             <p className="mt-4 lg:text-[21px] md:text-[21px] xmd:text-[16px] xxxsm:text-[15px] mx-6 pb-6"><b>Best For:</b> <span className='text-[#515151]'>{plan.bestFor}</span></p>
-                            <button className="bg-[#1B6313] font-fontMedium text-white font-bold py-2 mt-auto rounded-lg w-full 2xl:text-[28px] md:text-[28px] xmd:text-[20px] xxsm:text-[16px] xxxsm:text-[14px]">
+                            <button
+                                className={style.customButton}>
                                 Subscribe Now
                             </button>
                         </div>

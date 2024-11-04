@@ -1,11 +1,79 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
+
 ::-webkit-scrollbar {
-    width: 5px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #fff; 
-  }
-  ::-webkit-scrollbar-thumb {
-    background: var(--purpleColor); 
-  }
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--purpleColor);
+}
+.cancel-btn-hover-action{
+  position: relative;
+  transition: color 0.3s ease;
+  overflow: hidden; /* Ensure overflow is hidden to not show the pseudo-element outside the button */
+  z-index: 1;
+}
+
+.cancel-btn-hover-action:before {
+  transition: 0.8s all ease;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%; /* Start from the bottom of the button */
+  height: 100%; /* Full height */
+  opacity: 0; /* Start hidden */
+  content: "";
+  background-color: var(--yellowColor);
+  z-index: -1; /* Place behind the text */
+}
+
+.cancel-btn-hover-action:hover,
+.cancel-btn-hover-action:focus {
+  color: white; /* Change text color on hover */
+}
+
+.cancel-btn-hover-action:hover:before,
+.cancel-btn-hover-action:focus:before {
+  transition: 0.5s all ease;
+  top: 0; /* Move the background color to the top */
+  opacity: 1; /* Fade in */
+  border-color: var(--yellowColor);
+}
+
+.btn-hover-action {
+  position: relative;
+  transition: color 0.3s ease;
+  overflow: hidden; /* Ensure overflow is hidden to not show the pseudo-element outside the button */
+  z-index: 1;
+}
+
+.btn-hover-action:before {
+  transition: 0.8s all ease;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%; /* Start from the bottom of the button */
+  height: 100%; /* Full height */
+  opacity: 0; /* Start hidden */
+  content: "";
+  background-color: black;
+  z-index: -1; /* Place behind the text */
+}
+
+.btn-hover-action:hover,
+.btn-hover-action:focus {
+  color: white; /* Change text color on hover */
+}
+
+.btn-hover-action:hover:before,
+.btn-hover-action:focus:before {
+  transition: 0.5s all ease;
+  top: 0; /* Move the background color to the top */
+  opacity: 1; /* Fade in */
+  border-color: black;
+}
+
+

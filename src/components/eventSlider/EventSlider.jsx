@@ -3,34 +3,10 @@ import Slider from 'react-slick';
 import styles from './style.module.css';
 import Prev from '../../assets/images/icons/prev-icon-black.png';
 import Next from '../../assets/images/icons/next-icon-black.png';
-import Event1 from '../../assets/images/events/ev1.webp';
-import Event2 from '../../assets/images/events/ev2.webp';
-import Event3 from '../../assets/images/events/ev3.webp';
-import Event4 from '../../assets/images/events/ev4.webp';
 
-const EventSlider = () => {
+const EventSlider = ({ title, subDetails, viewBtnHide, sliderData, buttonFlag = true }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  const eventsData = [
-    {
-      title: 'Mission Meetups',
-      image: Event1,
-    },
-    {
-      title: 'Holy Huddles',
-      image: Event2,
-    },
-    {
-      title: 'Grace Gatherings',
-      image: Event3,
-    },
-    {
-      title: 'Fellowship Fest',
-      image: Event4,
-    },
-  ];
-
-  const totalSlides = eventsData.length;
+  const totalSlides = sliderData.length;
 
   const settings = {
     infinite: false, // No infinite scrolling
@@ -57,25 +33,29 @@ const EventSlider = () => {
   };
 
   return (
-    <div className={`${styles.eventSliderContainer} `}>
+    <div className={`${styles.eventSliderContainer} ${!buttonFlag && "bg-[#12440D] xl:mx-[26px] lg:mx-[26px] md:mx-[26px] sm:mx-[15px] xxxsm:mx-[15px] rounded-3xl  text-white xl:py-20 sm:py-10 xxxsm:py-5"}`}>
       <div className="pb-8">
         <div>
           {/* Header */}
-          <div className={`${styles.eventSliderWrapper} flex justify-between items-center mb-6`}>
-            <h2 className="text-4xl font-bold">Explore Our Events</h2>
-            <button className="bg-white border border-black text-black px-6 py-2 rounded-lg">
-              View All
-            </button>
+          <div className={`${styles.eventSliderWrapper} ${buttonFlag ? "flex justify-between items-center" : "mx-auto text-center"}`}>
+            <div>
+              <h2>{title}</h2>
+              <p className={`${styles.eventSubTitle} mb-6 ${buttonFlag ? "text-gray-700" : "text-[#d0dacf]"}`}>
+                {subDetails}
+              </p>
+            </div>
+            {
+              buttonFlag && (
+                <button className={`${viewBtnHide && "hidden"} bg-white border border-black text-black px-6 py-2 rounded-lg`}>
+                  View All
+                </button>
+              )
+            }
           </div>
-
-          <p className={`${styles.eventSubTitle} mb-6 text-gray-700`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-          </p>
-
           {/* Slider */}
           <div className="relative">
             <Slider {...settings}>
-              {eventsData.map((event, index) => (
+              {sliderData.map((event, index) => (
                 <div data-aos="fade-up" data-aos-duration="1500" key={index} className="px-2">
                   <div className="relative group">
                     <img
@@ -84,6 +64,11 @@ const EventSlider = () => {
                       className="w-full rounded-lg"
                     />
                     <h3 className={`${styles.eventsTitle}`}>{event.title}</h3>
+                    {
+                      !buttonFlag && (
+                        <p className='w-11/12 text-[#d0dacf] xl:text-[22px] sm:text-[18px] xxxsm:text-[16px]'>{event.details}</p>
+                      )
+                    }
                   </div>
                 </div>
               ))}
@@ -99,12 +84,11 @@ const EventSlider = () => {
 function SampleNextArrow(props) {
   const { onClick, currentSlide, totalSlides } = props;
 
-  // Show the Next button only if there are more slides to show
   return (
     currentSlide < totalSlides - 3 && ( // Adjust 3 based on slidesToShow
       <div
         onClick={onClick}
-        className={`${styles.arrowNextBtnBg} absolute  top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full cursor-pointer z-10`}
+        className={`${styles.arrowNextBtnBg} transform bg-white p-2 rounded-full cursor-pointer z-10`}
       >
         <img src={Next} alt="Next" className={styles.arrowIcon} />
       </div>
@@ -121,7 +105,7 @@ function SamplePrevArrow(props) {
     currentSlide > 0 && ( // Show Prev button only if not on the first slide
       <div
         onClick={onClick}
-        className={`${styles.arrowPrevBtnBg} absolute  top-1/2 transform -translate-y-1/2 bg-white border p-2 rounded-full cursor-pointer z-10`}
+        className={`${styles.arrowPrevBtnBg} transform bg-white border p-2 rounded-full cursor-pointer z-10`}
       >
         <img src={Prev} alt="Prev" className={styles.arrowIcon} />
       </div>

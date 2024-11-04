@@ -3,7 +3,7 @@ import styles from './style.module.css'
 const Signup = () => {
     return (
         <div className="py-[40px] xl:py-[90px] lg:py-[60px] md:py-[40px]  flex items-center justify-center">
-            <div className="bg-white p-8 msm:mx-[20px] xxxsm:mx-[10px] rounded-lg shadow-lg w-[600px] h-[600px] xl:w-[600px] xl:h-[630px] lg:h-[550px] md:h-[510px] md:w-[500px] sm:w-[500px] sm:h-[510px] msm:w-[420px] msm:h-[450px] xxxsm:w-[450px] xxxsm:h-[420px]">
+            <div className="bg-[#EDE2D4] xl:rounded-[50px] md:rounded-[25px] xsm:rounded-[20px] xxxsm:rounded-[18px] p-8 msm:mx-[20px] xxxsm:mx-[10px] rounded-lg shadow-lg w-[600px] h-[600px] xl:w-[600px] xl:h-[630px] lg:h-[550px] md:h-[510px] md:w-[500px] sm:w-[500px] sm:h-[510px] msm:w-[420px] msm:h-[450px] xxxsm:w-[450px] xxxsm:h-[420px]">
                 <h2 className="xl:text-[44px] lg:text-[35px] md:text-[28px] sm:text-[28px] msm:text-[23px] xxxsm:text-[23px] font-fontMedium font-bold text-center lg:mb-6 md:mb-4  text-[#A357C4]">Register Your Account</h2>
 
                 <form onSubmit={(e)=>e.preventDefault()}>
@@ -51,7 +51,7 @@ const Signup = () => {
                 {/* Join Option */}
                 <div className="text-center mt-9 lg:mt-5 msm:mt-2 xxxsm:mt-2">
                     <p className="lg:text-[22px]  md:text-[17px] msm:text-[16px] sm:text-[17px] xxxsm:text-[16px] text-gray-600">
-                        Already have an account? <Link to={"/catholicgrapevine/login"} className="text-[#A357C4] font-fontMedium font-bold hover:underline">Sign In</Link>
+                        Already have an account? <Link to={"/login"} className="text-[#A357C4] font-fontMedium font-bold hover:underline">Sign In</Link>
                     </p>
                 </div>
             </div>

@@ -3,10 +3,29 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 280px;
+  height: 600px;
   position: relative;
 }
 
+.navWrapperForAllPages {
+  background-image: url("../../assets/images/home-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+}
+
+.navWrapperForAllAuth {
+
+  background-image: url("../../assets/images/home-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100px;
+  position: relative;
+
+}
 .navWrapperSecondary {
   height: 100px;
   background-image: url("../../assets/images/home-bg.png");
@@ -30,12 +49,68 @@ p {
   height: 100px;
   width: 100%;
   font-weight: 600;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  /* opacity: 0.5; */
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+  backdrop-filter: blur(8px);
   font-size: 20px;
 }
 
 .navLinkWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  /* Use the same image as the navWrapper */
+  filter: blur(8px);
+  /* Adjust the blur effect here */
+  z-index: -1;
+  /* Send the blur behind the links */
+}
+
+.navLinkWrapperSecondary {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 0;
+  z-index: 9999;
+  height: 100px;
+  width: 100%;
+  font-weight: 600;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+  backdrop-filter: blur(8px);
+  /* font-size: 20px; */
+}
+
+.authNav{
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 0;
+  z-index: 9999;
+  height: 100px;
+  width: 100%;
+  font-weight: 600;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+  backdrop-filter: blur(8px);
+  /* font-size: 20px; */
+}
+.authNav::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  /* Use the same image as the navWrapper */
+  filter: blur(8px);
+  /* Adjust the blur effect here */
+  z-index: -1;
+  /* Send the blur behind the links */
+}
+.navLinkWrapperSecondary::before {
   content: "";
   position: absolute;
   top: 0;
@@ -102,9 +177,19 @@ p {
   border-color: #a357c4;
 }
 
+/* NAV BANNER */
+
+.BannerleftImg {
+  margin-top: 40px;
+}
+
 @media (max-width: 1920px) {
   .navWrapper {
-    height: 650px;
+    height: 635px;
+  }
+
+  .navWrapperForAllPages {
+    height: 635px;
   }
 }
 
@@ -118,22 +203,32 @@ p {
     position: relative;
     border-bottom: none !important;
   }
-  .navWrapperSecondary > .navLinkWrapper{
+
+  .navWrapper {
+    height: 620px;
+  }
+
+  .navWrapperForAllPages {
+    height: 620px;
+  }
+
+  .BannerleftImg {
+    margin-top: 80px;
+  }
+
+  .navWrapperSecondary>.navLinkWrapper {
     border-bottom: none;
 
   }
-  .navLinkWrapper {
+
+  /* .navLinkWrapper {
     font-size: 20px;
-  }
+  } */
 
-  .logoImg {
-    width: 610px;
-    height: 290px;
-  }
+  /* .navLinkWrapperSecondary {
+    font-size: 20px;
+  } */
 
-  .navWrapper {
-    height: 540px;
-  }
 }
 
 @media (max-width: 1440px) {
@@ -141,9 +236,6 @@ p {
     font-size: 18px;
   }
 
-  .navWrapper {
-    height: 490px;
-  }
 
   .logoImg {
     width: 510px;
@@ -164,6 +256,10 @@ p {
 
   .navWrapper {
     height: 460px;
+  }
+
+  .BannerleftImg{
+    margin-top: 0;
   }
 }
 

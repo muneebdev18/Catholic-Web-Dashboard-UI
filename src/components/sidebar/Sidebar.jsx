@@ -57,7 +57,7 @@ const Sidebar = () => {
               sidebarNavLinks.map((item,index)=>{
                 return(
                   <li key={index}>
-                    <NavLink to={item.page} className={({isActive})=> isActive ? ` flex items-center text-[20px] font-medium text-gray-700 px-[20px] py-[12px] hover:text-[#A357C4]  ${styles.activeLink} ` : ` flex items-center text-[20px] font-medium text-gray-700  hover:text-[#A357C4]  px-[20px] py-[12px] ${styles.inActiveLink}`}>
+                    <NavLink onClick={()=>setIsOpen(false)} to={item.page} className={({isActive})=> isActive ? ` flex items-center text-[20px] font-medium text-gray-700 px-[20px] py-[12px] hover:text-[#A357C4]  ${styles.activeLink} ` : ` flex items-center text-[20px] font-medium text-gray-700  hover:text-[#A357C4]  px-[20px] py-[12px] ${styles.inActiveLink}`}>
                       <item.icon  className="mr-3" />
                   {item.name}
                     </NavLink>

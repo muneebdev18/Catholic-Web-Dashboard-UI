@@ -16,15 +16,18 @@
   justify-content: center;
   align-items: center;
 }
+
 #cardContainer {
   height: 220px;
   padding-left: 30px;
   padding-right: 30px;
 }
-.cardImg{
+
+.cardImg {
   width: 88px;
   height: 88px;
 }
+
 .headingSection>p {
   font-family: var(--Secondary-Font);
   font-size: 102px;
@@ -40,7 +43,8 @@
   padding: 14px 70px;
   position: relative;
   transition: color 0.3s ease;
-  overflow: hidden; /* Ensure overflow is hidden to not show the pseudo-element outside the button */
+  overflow: hidden;
+  /* Ensure overflow is hidden to not show the pseudo-element outside the button */
   z-index: 1;
 }
 
@@ -50,26 +54,35 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 100%; /* Start from the bottom of the button */
-  height: 100%; /* Full height */
-  opacity: 0; /* Start hidden */
+  top: 100%;
+  /* Start from the bottom of the button */
+  height: 100%;
+  /* Full height */
+  opacity: 0;
+  /* Start hidden */
   content: '';
   background-color: black;
-  z-index: -1; /* Place behind the text */
+  z-index: -1;
+  /* Place behind the text */
   /* border-color: #A357C4; */
 }
 
-#searchBtn:hover, #searchBtn:focus {
-  color: white; /* Change text color on hover */
+#searchBtn:hover,
+#searchBtn:focus {
+  color: white;
+  /* Change text color on hover */
 
 
 
 }
 
-#searchBtn:hover:before, #searchBtn:focus:before {
+#searchBtn:hover:before,
+#searchBtn:focus:before {
   transition: 0.5s all ease;
-  top: 0; /* Move the background color to the top */
-  opacity: 1; /* Fade in */
+  top: 0;
+  /* Move the background color to the top */
+  opacity: 1;
+  /* Fade in */
   border-color: black;
 }
 
@@ -92,7 +105,8 @@
   align-items: center;
   justify-content: center;
 }
-.sellerServiceBox > img{
+
+.sellerServiceBox>img {
   width: 120px;
   height: 120px;
 }
@@ -209,9 +223,6 @@
   width: 920px;
   font-size: 20px;
 }
-.searchBtn{
-
-}
 
 @media (max-width: 1920px) {
   /* #cardContainer {
@@ -254,16 +265,19 @@
   /* .serviceCardSection {
     padding: 0 50px;
   } */
-   .headingSection > p{
+  .headingSection>p {
     font-size: 80px;
-   }
+  }
+
   #cardContainer {
     height: 160px;
   }
-  .sellerServiceBox > img{
+
+  .sellerServiceBox>img {
     width: 90px;
     height: 90px;
   }
+
   .sellerServiceBox>.sellerServiceTitle {
     font-size: 69px;
     line-height: 85px;
@@ -283,16 +297,19 @@
   .sellerServiceButton {
     font-size: 22px;
   }
+
   .cardTitle {
 
     font-size: 17px;
 
   }
+
   #inputBox {
     width: 520px;
     font-size: 18px;
   }
-  #searchBtn{
+
+  #searchBtn {
 
     font-size: 20px;
     padding: 10px 48px;
@@ -312,6 +329,7 @@
     height: 50px;
     width: 50px;
   }
+
   .cardTitle {
 
     font-size: 17px;
@@ -327,11 +345,13 @@
   .sellerServiceBox>.sellerServiceDesc {
     font-size: 23px;
   }
+
   #inputBox {
     width: 620px;
     font-size: 18px;
   }
-  #searchBtn{
+
+  #searchBtn {
 
     font-size: 22px;
     padding: 10px 48px;
@@ -352,7 +372,8 @@
     font-size: 20px;
     padding: 12px 56px;
   }
-  .headingSection >p{
+
+  .headingSection>p {
     font-size: 60px;
   }
 }
@@ -377,8 +398,10 @@
   }
 
   #inputBox {
-    width: 350px;font-size: 18px;
+    width: 350px;
+    font-size: 18px;
   }
+
   .sellerServiceBox>.sellerServiceTitle {
     font-size: 37px;
     line-height: 42px;
@@ -409,16 +432,18 @@
   .sellerServiceBox>.sellerServiceDesc {
     font-size: 17px;
   }
-  .sellerServiceWrapper{
+
+  .sellerServiceWrapper {
     padding: 40px 28px;
     border-radius: 20px;
   }
-  .sellerServiceButton{
+
+  .sellerServiceButton {
     font-size: 17px;
     padding: 10px 36px;
   }
 
-  
+
 }
 
 @media (max-width: 640px) {
@@ -442,7 +467,8 @@
   #searchBtn {
     padding: 10px 20px;
   }
-  .sellerServiceBox > img{
+
+  .sellerServiceBox>img {
     width: 70px;
     height: 70px;
   }
@@ -512,7 +538,8 @@
   #searchBtn {
     padding: 10px 40px;
   }
-  .headingSection >p{
+
+  .headingSection>p {
     font-size: 30px;
   }
 }

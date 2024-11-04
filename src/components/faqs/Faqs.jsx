@@ -3,57 +3,10 @@ import { PlusIcon, MinusIcon } from "lucide-react"; // Or use FontAwesome icons
 import styles from './style.module.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
-const faqs = [
-  {
-    question: "How much does a Shopify website cost?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur. A sed pla tea morbi quisque gravida dictum vel. Vesti bulum au gue congue elit aliquam.",
-  },
-  {
-    question: "How does communication work if we start a project?",
-    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    question: "Do you have an hourly rate for ADHOC tasks?",
-    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    question: "How does communication work if we start a project?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, distinctio?",
-  },
-  {
-    question: "How does communication work if we start a project?",
-    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    question: "How does communication work if we start a project?",
-    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    question: "How does communication work if we start a project?",
-    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    question: "How does communication work if we start a project?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, distinctio?",
-  },
-  {
-    question: "How does communication work if we start a project?",
-    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    question: "How does communication work if we start a project?",
-    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-
-  // Add more FAQs as needed
-];
 
 const FAQItem = ({ faq, isOpen, onClick, aosDelay }) => (
   <div
-    className="border border-black bg-white rounded-lg mb-4"
+    className="border border-black bg-white rounded-lg mb-6"
     data-aos="fade-up"
     data-aos-delay={aosDelay} // Stagger animation delay
   >
@@ -62,28 +15,26 @@ const FAQItem = ({ faq, isOpen, onClick, aosDelay }) => (
       className="w-full flex justify-between items-center text-left"
       onClick={onClick}
     >
-      <span className="font-semibold">{faq.question}</span>
+      <span className="font-faq">{faq.question}</span>
       {isOpen ? (
-        <div className="border border-black p-[2px] rounded-[3px]">
+        <div className="border border-black p-1 rounded-[3px]">
           <MinusIcon className={styles.addsubIcon} />
         </div>
       ) : (
-        <div className="border border-black p-[2px] rounded-[3px]">
+        <div className="border border-black p-1 rounded-[3px]">
           <PlusIcon className={styles.addsubIcon} />
         </div>
       )}
     </button>
     {isOpen && (
-      <div className={`${styles.faqAnswer} p-4 border-t text-[#333333] border-black`}>
+      <div className={`${styles.faqAnswer} py-4 px-6 border-t text-[#333333] border-black`}>
         <p>{faq.answer}</p>
       </div>
     )}
   </div>
 );
 
-
-const Faqs = () => {
-
+const Faqs = ({ faqs, title = "Frequently Ask Questions" }) => {
   useEffect(() => {
     AOS.init({
       duration: 1000, // Animation duration (optional)
@@ -98,22 +49,22 @@ const Faqs = () => {
   };
 
   // Split the FAQ array for left and right columns
-  const leftColumnFAQs = faqs.slice(0, 5); // First 5 FAQs go to the left column
-  const rightColumnFAQs = faqs.slice(5); // Remaining FAQs go to the right column
+  const leftColumnFAQs = faqs?.slice(0, 5); // First 5 FAQs go to the left column
+  const rightColumnFAQs = faqs?.slice(5); // Remaining FAQs go to the right column
 
   return (
     <div className={` ${styles.faqContainer} `}>
       <h2 className="">
-        Frequently Ask Questions
+        {title}
       </h2>
       <p className="">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt.
       </p>
-      <div className="grid sm:grid-cols-2 gap-x-6 ">
+      <div className="grid sm:grid-cols-2 gap-x-6">
         {/* Left Column */}
         <div>
-          {leftColumnFAQs.map((faq, index) => (
+          {leftColumnFAQs?.map((faq, index) => (
             <FAQItem
               key={index}
               faq={faq}
@@ -125,7 +76,7 @@ const Faqs = () => {
 
         {/* Right Column */}
         <div>
-          {rightColumnFAQs.map((faq, index) => (
+          {rightColumnFAQs?.map((faq, index) => (
             <FAQItem
               key={index + 5} // Shift the index for right column to avoid conflicts
               faq={faq}

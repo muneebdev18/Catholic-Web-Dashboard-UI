@@ -27,9 +27,7 @@ const PostYourJob = () => {
         <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 lg:gap-0 md:gap-[40px]  lg:h-[800px] md:h-[1050px] sm:h-[960px] bg-[#A357C4] text-white lg:px-[83px] lg:py-[121px] md:px-[35px] md:py-[38px] sm:px-[26px] xxxsm:px-[15px] xxxsm:py-[42px] rounded-[60px] sm:rounded-[40px] xxxsm:rounded-[15px] overflow-hidden mx-9 md:mx-[26px] xxxsm::my-[28px] xxxsm:mx-[15px] mb-12 lg:items-center md:items-start">
             {/* Text Section */}
             <div data-aos="fade-right"
-   
-    
-     data-aos-duration="500" className=" sm:text-start md:text-left z-20 lg:h-full sm:h-0">
+                data-aos-duration="500" className=" sm:text-start md:text-left z-20 lg:h-full sm:h-0">
                 <h1 className="3xl:text-[85px] xl:text-[65px] lg:text-[57px] md:text-[43px] sm:text-[35px] xsm:text-[27px] xxsm:text-[24px] xxxsm:text-[24px]  font-[800] mb-3 leading-tight">
                     Post Your Job for
                     <br /> Free and <span className="text-white opacity-40 ">Hire Catholic Professionals!</span>
@@ -46,9 +44,9 @@ const PostYourJob = () => {
 
             {/* Right Section: Circular Design */}
             <div data-aos="fade-left"
-   
-    
-   data-aos-duration="500" id={styles.rightSide} className="relative mt-12 md:mt-0 w-full flex items-center justify-center ">
+
+
+                data-aos-duration="500" id={styles.rightSide} className="relative mt-12 md:mt-0 w-full flex items-center justify-center ">
                 {/* Logo in the center (clickable) */}
                 <div
                     className="relative z-20 lg:w-60 lg:h-60 sm:w-[200px] sm:h-[200px] bg-white rounded-full flex items-center justify-center cursor-pointer"

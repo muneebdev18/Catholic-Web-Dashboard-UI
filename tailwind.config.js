@@ -18,9 +18,12 @@ export default {
         '2xl': '1536px',
         '3xl': '1600px'
       },
-      fontFamily:{
-        fontMedium:"Degular Medium",
-        stylishFont:"Style Script"
+      fontFamily: {
+        fontMedium: "Degular Medium",
+        stylishFont: "Style Script"
+      },
+      fontWeight: {
+        faq: 600
       },
       colors: {
         'navbar': 'rgba(255, 255, 255, 0.8)',
